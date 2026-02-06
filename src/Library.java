@@ -44,7 +44,7 @@ public class Library {
     }
 
     public void yazaraGoreAra() {
-        Scanner scanner = new Scanner(System.in);
+
         System.out.print("Aramak İstediğiniz Kitabın Yazarını Giriniz: ");
         String yazar = scanner.nextLine();
 
