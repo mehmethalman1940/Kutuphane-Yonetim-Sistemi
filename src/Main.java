@@ -13,39 +13,44 @@ public class Main {
                 "3. Yazara Göre Ara\n" +
                 "4. Kitap Sayısını Göster \n" +
                 "5. En Eski kitap \n" +
-                "6. Kitap Sil \n"+
-                "7. Çıkış Yap \n"+
+                "6. Kitap Sil \n" +
+                "7. Çıkış Yap \n" +
                 "====================================================";
 
 
-       System.out.println(islemler);
-        while (true){
+        System.out.println(islemler);
+        while (true) {
 
 
             System.out.print("Yapmak İstediğiniz İşlemi Giriniz: ");
             int islem = scanner.nextInt();
-            if (islem==1){
-                library.kitapEkle();
-            }
-            if (islem==2){
-                library.tumKitaplariListele();
-            }
-            if (islem==3){
-                library.yazaraGoreAra();
-            }
-            if (islem==4){
-                library.kitapSayisi();
-            }
-            if (islem==5){
-                library.enEskiKitap();
-            }
-            if (islem == 6){
-                library.kitapSilme();
-            }
-            if (islem == 7){
-                break;
+
+            switch (islem) {
+                case 1:
+                    library.addBook();
+                    break;
+                case 2:
+                    library.listAllBook();
+                    break;
+                case 3:
+                    library.searchingBooksAuthor();
+                    break;
+                case 4:
+                    library.bookSize();
+                    break;
+                case 5:
+                    library.oldestBook();
+                    break;
+                case 6:
+                    library.removeBook();
+                    break;
+                case 7:
+                    System.out.println("Programdan çıkılıyor...");
+                    return;
+                default:
+                    System.out.println("Geçersiz seçim");
+
             }
         }
-
     }
 }

@@ -1,17 +1,17 @@
 public class Book {
 
     private int id;
-    private String baslik;
-    private String yazar;
-    private int yil;
-    private int sayfaSayisi;
+    private String title;
+    private String author;
+    private int year;
+    private int pageNumber;
 
-    public Book(int id, String baslik, int yil, String yazar, int sayfaSayisi) {
+    public Book(int id, String title, int yil, String yazar, int sayfaSayisi) {
         this.id = id;
-        this.baslik = baslik;
-        this.yil = yil;
-        this.yazar = yazar;
-        this.sayfaSayisi = sayfaSayisi;
+        this.title = title;
+        this.year = yil;
+        this.author = yazar;
+        this.pageNumber = sayfaSayisi;
     }
 
     public int getId() {
@@ -22,52 +22,52 @@ public class Book {
         this.id = id;
     }
 
-    public String getBaslik() {
-        return baslik;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBaslik(String baslik) {
-        this.baslik = baslik;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getYazar() {
-        return yazar;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setYazar(String yazar) {
-        this.yazar = yazar;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public int getYil() {
-        return yil;
+    public int getYear() {
+        return year;
     }
 
-    public void setYil(int yil) {
-        this.yil = yil;
+    public void setYear(int year) {
+        this.year = year;
     }
 
-    public int getSayfaSayisi() {
-        return sayfaSayisi;
+    public int getPageNumber() {
+        return pageNumber;
     }
 
-    public void setSayfaSayisi(int sayfaSayisi) {
-        this.sayfaSayisi = sayfaSayisi;
+    public void setPageNumber(int pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
 
     public void bilgileriGoster(){
         System.out.println("Id: "+ getId());
-        System.out.println("Kitap Başlığı: "+ getBaslik());
-        System.out.println("Kitap Yazarı "+ getYazar());
-        System.out.println("Kitap Yılı: "+ getYil());
-        System.out.println("Kitap Sayfa Sayısı : "+ getSayfaSayisi());
+        System.out.println("Kitap Başlığı: "+ getTitle());
+        System.out.println("Kitap Yazarı "+ getAuthor());
+        System.out.println("Kitap Yılı: "+ getYear());
+        System.out.println("Kitap Sayfa Sayısı : "+ getPageNumber());
     }
 
     public String toString() {
         return "Kitap ID: " + id +
-                ", Başlık: " + baslik +
-                ", Yazar: " + yazar +
-                ", Yayın Yılı: " + yil +
-                ", Sayfa Sayısı: " + sayfaSayisi;
+                ", Başlık: " + title +
+                ", Yazar: " + author +
+                ", Yayın Yılı: " + year +
+                ", Sayfa Sayısı: " + pageNumber;
     }
 }
